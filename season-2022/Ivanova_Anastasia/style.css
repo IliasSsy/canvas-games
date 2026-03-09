@@ -1,0 +1,58 @@
+ .game {
+    width: 700px;
+    height: 300px;
+    background-image: url(img/bg.png);
+    background-size: 700px, 200px;
+    border-bottom: 1px solid #000;
+    margin: auto;
+}
+
+#dino {
+    width: 100px;
+    height: 100px;
+    background-image: url(img/chel.gif);
+    background-size: 100px, 100px;
+    position: relative;
+    top: 210px;
+}
+
+#cactus {
+    width: 89px;
+    height: 110px;
+    background-image: url(img/babka.png);
+    background-size: 80px, 100px;
+    position: relative;
+    top: 110px;
+    left: 620px;
+    animation: cactusMov 2s infinite linear;
+}
+
+@keyframes cactusMov {
+    0% {
+        left: 640px;
+    }
+    100% {
+        left: -20px;
+    }
+}
+
+.jump {
+    animation: jump 10s linear;
+}
+@keyframes jump {
+    0% {
+        top: 100px;
+    }
+30% {
+    top: 170px;
+}
+50% {
+    top: 220px;
+}
+80% {
+    top: 170px;
+}
+    100% {
+        top: 100px;
+    }
+}

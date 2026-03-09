@@ -1,0 +1,61 @@
+.game {
+    width: 600px;
+    height: 200px;
+    background-image: url(image/sea.png);
+    background-size: 600px 200px;
+    border-bottom: 1px solid #008080;
+    margin: auto;
+}
+
+#fish {
+    width: 50px;
+    height: 50px;
+    background-image: url(image/fish.png);
+    background-size: 50px 50px;
+    position: relative;
+    top: 150px;
+
+}
+
+#stone {
+    width: 20px;
+    height: 40px;
+    background-image: url(image/stone.png);
+    background-size: 20px 40px;
+    position: relative;
+    top: 110px;
+    left: 580px;
+    animation: stoneMov 2s infinite linear;
+}
+
+@keyframes stoneMov {
+    0% {
+        left: 580px;
+    }
+
+    100% {
+        left: -20px;
+    }
+}
+
+.jump {
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 150px;
+    }
+
+    30% {
+        top: 130px;
+    }
+
+    50% {
+        top: 80px;
+    }
+
+    100% {
+        top: 150px;
+    }
+}

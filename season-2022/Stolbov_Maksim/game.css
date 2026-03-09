@@ -1,0 +1,15 @@
+body{
+    background:rgb(10, 18, 41);
+    padding: 0;
+    margin: 0;
+}
+#wrapper{
+    width:50%;
+    margin:0 auto;
+}
+#game{
+    width: 100%;
+}
+canvas{
+   cursor:none;
+}

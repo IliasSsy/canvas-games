@@ -1,0 +1,86 @@
+[
+  {
+    "author": "Лочаков Александр",
+    "gameName": "Star wars",
+    "imageSrc": "../src/images/2025/star_wars.png",
+    "altText": "star_wars",
+    "link": "../season-2025/Lochakov_Alexander/index.html"
+  },
+  {
+    "author": "Шитов Ярослав",
+    "gameName": "Defense of the blue square",
+    "imageSrc": "../src/images/2025/defense.png",
+    "altText": "defense",
+    "link": "../season-2025/Shitov_Yaroslav/index.html"
+  },
+  {
+    "author": "Опарина Полина",
+    "gameName": "Игра в шарики",
+    "imageSrc": "../src/images/2025/balls.png",
+    "altText": "balls",
+    "link": "../season-2025/Oparina_Polina/index.html"
+  },
+  {
+    "author": "Рудаков Тимофей",
+    "gameName": "THE DICE",
+    "imageSrc": "../src/images/2025/dice.png",
+    "altText": "dice",
+    "link": "../season-2025/Rudakov_Timofey/index.html"
+  },
+  {
+    "author": "Хохлова Алёна",
+    "gameName": "Новый Flappy Bird",
+    "imageSrc": "../src/images/2025/fb.png",
+    "altText": "fb",
+    "link": "../season-2025/Hohlova_Alena/index.html"
+  },
+  {
+    "author": "Широкова Софья",
+    "gameName": "Mouse and cheese",
+    "imageSrc": "../src/images/2025/mouse_and_cheese.png",
+    "altText": "mouse_and_cheese",
+    "link": "../season-2025/Shirokova_Sofia/index.html"
+  },
+  {
+    "author": "Данилов Ярослав",
+    "gameName": "Chronicles of Empty Space",
+    "imageSrc": "../src/images/2025/coes.png",
+    "altText": "coes",
+    "link": "../season-2025/Danilov_Yaroslav/index.html"
+  },
+  {
+    "author": "Бабинцев Ярослав",
+    "gameName": "Undyne (Pacifist)",
+    "imageSrc": "../src/images/2025/undyne.png",
+    "altText": "undyne",
+    "link": "../season-2025/Babincev_Arseniy/index.html"
+  },
+  {
+    "author": "Васьков Николай",
+    "gameName": "Doodle Jump",
+    "imageSrc": "../src/images/2025/doodle_jump.png",
+    "altText": "doodle_jump",
+    "link": "../season-2025/Vaskov_Nikolay/index.html"
+  },
+  {
+    "author": "Дорофеев Кирилл",
+    "gameName": "Curse of the maze",
+    "imageSrc": "../src/images/2025/cotm.png",
+    "altText": "cotm",
+    "link": "../season-2025/Dorofeev_Kirill/index.html"
+  },
+  {
+    "author": "Ляпунцов Семён",
+    "gameName": "Space Invaders",
+    "imageSrc": "../src/images/2025/space_invaders2.png",
+    "altText": "space_invaders",
+    "link": "../season-2025/Lyapuntsov_Semen/index.html"
+  },
+  {
+    "author": "Колупаев Иван",
+    "gameName": "Aero Hockey",
+    "imageSrc": "../src/images/2025/aero_hockey.png",
+    "altText": "aero_hockey",
+    "link": "../season-2025/Kolupaev_Ivan/index.html"
+  }
+]

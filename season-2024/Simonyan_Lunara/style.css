@@ -1,0 +1,57 @@
+body {
+    background: #f9f9f9;
+    background-image: url(6305744913.jpg);
+}
+
+h2 {
+    color: #082dff;
+    font-family: monospace;
+    text-align: center;
+}
+
+.background {
+    table-layout: fixed;
+    border-spacing: 0;
+}
+
+.background td {
+    padding: 0;
+}
+
+.lava,
+.actor {
+    background: #ff8400;
+}
+
+.wall {
+    background: #b30101;
+    border: solid 3px #000000ae;
+    box-sizing: content-box;
+}
+
+.actor {
+    position: absolute;
+
+}
+
+.coin {
+    background: #e2e838;
+}
+
+.player {
+    background: blue;
+}
+.lost .player {
+    background: #b10000;
+}
+
+.won .player {
+    background: rgb(0, 165, 0);
+}
+
+.game {
+    position: relative;
+    overflow: hidden;
+}
+
+

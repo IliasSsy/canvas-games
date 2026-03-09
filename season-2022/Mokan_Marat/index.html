@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Labirint</title>
+<h1 class="description">Игра "Лабиринт"</h1>
+<style>
+  canvas {
+    border: 6px;
+    background: white;
+  }
+
+  img {
+    display: none;
+  }
+
+  .description {
+    font-family: Impact;
+    font-size: xx-large;
+    color: black;
+  }
+
+  .description1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: large;
+    color: black;
+  }
+
+</style>
+<script src="Maze.js"></script>
+</head>
+<body>
+  <p class="description1">Правила игры: Необходимо добраться до конца лабиринта, управляя смайликом с помощью стрелок на клавиатуре</p>
+   <canvas id="Canvas"></canvas>
+   <p class="description1">Если ты прошёл этот лабиринт, то зайди на mazegenerator.net и сгенерируй новый!</p>
+   <p class="description1">Shape: Rectangular</p>
+   <p class="description1">Style: Orthogonal(Square cells)</p>
+   <p class="description1">Width: 36, Height: 36, (Остальное по стандарту) </p>
+   <p class="description1">Если нужно решение лабиринта, то ставь галочку на Solution => Скачивай .PNG файл и вставляй в папку игры вместо старого => Готово!</p>
+   <img id="face" src="face.png">
+</body>
+</html> 

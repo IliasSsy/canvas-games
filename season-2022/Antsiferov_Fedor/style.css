@@ -1,0 +1,68 @@
+ body canvas {
+    display: block;
+    margin: auto;
+    }  
+     
+img.image { width: 25%; height:40%; display: block;
+   margin-left:725px;   height: auto ; margin-top:100px; }
+
+    div.videobox {
+        width: auto; 
+        position: fixed;
+        left: 0;
+        top: 0;
+        min-width: 100%;
+        min-height: 100%;
+        height: auto;
+        width: 100%;
+        overflow: hidden;
+        z-index: -9999;
+    }
+
+    div.text {
+            background: linear-gradient(
+              to right, 
+              rgb(20, 182, 28), 
+              rgb(209, 206, 44)
+            );
+            background-clip: text;
+            -webkit-background-clip:  text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin-top:75px;
+          }
+          
+          
+          
+          body {
+            background: hsl(204 150% 5%);
+            min-block-size: 100%;
+            min-inline-size: 100%;
+            box-sizing: border-box;
+            display: grid;
+            place-content: center;
+            font-family: system-ui;
+            font-size: min(800%, 8vmin);
+          }
+          
+          h1, p, body {
+            margin: 0;
+          }
+          
+          p {
+            font-family: "Dank Mono", ui-monospace, monospace;
+          }
+          .image1 {
+            width: 60%;
+            display: block;
+            margin: auto;
+            top: 50;
+
+          }
+          .image2{
+
+            width: 20%;
+            display: block;
+            margin: auto;
+
+          }

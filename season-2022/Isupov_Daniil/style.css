@@ -1,0 +1,70 @@
+/*весь экран*/
+body {
+    height: 100%;
+    overflow: hidden;
+    background-image: url("BACK.png");
+  }
+  /*Расположение игрового поля*/
+  .game-wrapper {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /*игровое поле*/
+  .main {
+    width: 800px;
+    height: 600px;
+    z-index: -2;
+    background-image: url("BACK.png");
+  }
+  /*Заголовок игры*/
+  header {
+    text-align: center;
+    background: black;
+    color: #fff;
+    -webkit-font-smoothing : none;
+    padding: 10px;
+  }
+   /*Лазер корабля*/
+  .main .laser {
+    position: absolute;
+    margin-left: -8.5px;
+    height: 25px;
+   /*Лазер корабля*/
+    z-index: -2;
+  }
+
+   /*Расположение врогов*/
+  .main .enemy{
+    position: absolute;
+  }
+  
+    /*Вражеский лазер*/
+  .main .enemyLaser {
+    position: absolute;
+    margin-left: -2.5px;
+    height: 20px;
+    /* default z-index is 0*/
+    z-index: -1;
+  }
+   /*Окно при проигрыше*/
+   .lose {
+    display: none;
+    position: absolute;
+    background: #6b1818;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  /*Окно при победе*/
+  .win  {
+    display: none;
+    position: absolute;
+    background: #05c04d;
+    color: white;
+    padding: 20px 50px;
+    border-radius: 10px;
+    text-align: center;
+  }

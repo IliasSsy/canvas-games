@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Space Invaders</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body> 
+    <div class="container">
+        <div>
+            <canvas id="canvas"></canvas>
+        </div> 
+        <div class="container_options" id="options_container">
+            <h1 class="container_options__title">OPTIONS</h1>
+            <input type="number" 
+                placeholder="Player health" 
+                class="container_options__option" 
+                id="option_health"
+            >
+            <input type="number" 
+                placeholder="Amount of victory points" 
+                class="container_options__option" 
+                id="option_score"
+            >
+            <input type="number" 
+                placeholder="Exemplary amount of enemies" 
+                class="container_options__option" 
+                id="option_enemies"
+            >
+            <input type="number" 
+                placeholder="Time of bonus existing (ms)" 
+                class="container_options__option" 
+                id="option_time_interval"
+            >
+
+            <button type="submit" class="container_options__button" id="submin_button">SET OPTIONS</button>
+
+            <div class="container_options__success hidden"  id="success_message">OPTIONS WERE SETTED!</div>
+            <div class="container_options__error hidden"  id="error_message">ERROR!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

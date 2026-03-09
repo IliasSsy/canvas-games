@@ -1,0 +1,65 @@
+[
+  {
+    "author": "Татьянина Мария",
+    "gameName": "Terius",
+    "imageSrc": "../src/images/2021/terius-min.png",
+    "altText": "terius",
+    "link": "https://guzhiwo.github.io/"
+  },
+  {
+    "author": "Долгирев Алексей",
+    "gameName": "Змейка",
+    "imageSrc": "../src/images/2021/snake-min.png",
+    "altText": "snake",
+    "link": "http://creado.info/snake3d/"
+  },
+  {
+    "author": "Красильников Богдан",
+    "gameName": "Freedom cactus",
+    "imageSrc": "../src/images/2021/krasilnikov30-min.png",
+    "altText": "freedom_cactus",
+    "link": "../season-2021/Krasilnikov_Bogdan/index.html"
+  },
+  {
+    "author": "Каракулов Даниил",
+    "gameName": "Тетрис",
+    "imageSrc": "../src/images/2021/tetris-min.png",
+    "altText": "tetris",
+    "link": "../season-2021/Karakulov_Daniil/index.html"
+  },
+  {
+    "author": "Ершов Глеб",
+    "gameName": "MagicBattle",
+    "imageSrc": "../src/images/2021/Vishenka4ka-min.png",
+    "altText": "magic_battle",
+    "link": "https://vishenka4ka.github.io/"
+  },
+  {
+    "author": "Сафаров Тахир",
+    "gameName": "Dungeons and Dragons",
+    "imageSrc": "../src/images/2021/tutitam1-min.png",
+    "altText": "d&d",
+    "link": "https://safarovt.github.io/"
+  },
+  {
+    "author": "Вересников Кирилл",
+    "gameName": "Файтинг",
+    "imageSrc": "../src/images/2021/kirillveresnikov-min.png",
+    "altText": "fighting",
+    "link": "https://veresnikov.github.io/intensive2021/"
+  },
+  {
+    "author": "Пряшников Андрей",
+    "gameName": "Крестики-нолики",
+    "imageSrc": "../src/images/2021/pryandrey-min.png",
+    "altText": "tic-tac-toe",
+    "link": "https://pryandrey.github.io/"
+  },
+  {
+    "author": "Игорь Майшанов",
+    "gameName": "Динозаврик",
+    "imageSrc": "../src/images/2021/igormayshanov-min.png",
+    "altText": "dino",
+    "link": "https://igormayshanov.github.io/web-development/Dinosaur%20Game/"
+  }
+]

@@ -1,0 +1,14 @@
+.child {
+    position: absolute;
+    top: 0;
+}
+
+.parent {
+    position: absolute;
+}
+
+.octopus {
+    position: absolute;
+    top: 125px;
+    left: 125px;
+}

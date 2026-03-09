@@ -1,0 +1,37 @@
+[
+  {
+    "author": "Симонян Лунара",
+    "gameName": "micro bro",
+    "imageSrc": "../src/images/2024/micro_bro.png",
+    "altText": "micro_bro",
+    "link": "../season-2024/Simonyan_Lunara/about.html"
+  },
+  {
+    "author": "Муравьёва Арина",
+    "gameName": "RUN, NYAN, RUN!",
+    "imageSrc": "../src/images/2024/run_nyan_run.png",
+    "altText": "run_nyan_run",
+    "link": "../season-2024/Muravyova_Arina/index.html"
+  },
+  {
+    "author": "Камалов Дмитрий",
+    "gameName": "The dungeon of the life meaning",
+    "imageSrc": "../src/images/2024/dungeon.png",
+    "altText": "dungeon",
+    "link": "../season-2024/Kamalov_Dmitriy/index.html"
+  },
+  {
+    "author": "Баркалова Екатерина",
+    "gameName": "Just Dance",
+    "imageSrc": "../src/images/2024/just_dance.png",
+    "altText": "just_dance",
+    "link": "../season-2024/Barkalova_Ekaterina/index.html"
+  },
+  {
+    "author": "Нестерова Екатерина",
+    "gameName": "Pacman",
+    "imageSrc": "../src/images/2024/pacman.png",
+    "altText": "pacman",
+    "link": "../season-2024/Nesterova_Ekaterina/index.html"
+  }
+]

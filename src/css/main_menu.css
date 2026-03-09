@@ -1,0 +1,118 @@
+body {
+    margin: 0 0;
+}
+
+.header {
+    position: relative;
+}
+
+.header__header-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 1440px;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 22px 0;
+}
+
+.header__top-panel {
+    padding-left: 22px;
+}
+
+.header__logo-image {
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.header__text-message-area {
+    padding-left: 22px;
+    padding-right: 22px;
+    align-items: center;
+    max-width: 540px;
+}
+
+.header__text-message {
+    font-size: 22px;
+    font-family: Roboto, sans-serif;
+}
+
+.main-div {
+    padding-top: 41px;
+    padding-left: 0;
+}
+
+.main-div__cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 150px;
+    gap: 30px;
+}
+
+.main-div__card {
+    width: 331px;
+    height: 416px;
+    background-color: white;
+    border: 5px solid #8363FF;
+    border-radius: 30px;
+}
+
+.main-div__card:hover {
+    transform: scale(1.05);
+    transition: 1s;
+}
+
+.card__title-area {
+    font-size: 23px;
+    padding-top: 25px;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.card__image-preview-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.main-div__button-wrapper {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+}
+
+.card__button {
+    width: 131px;
+    height: 35px;
+    background-color: #8363FF;
+    border-radius: 17px;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.card__button:disabled {
+    background-color: #ccc;
+    cursor: revert;
+}
+
+@media screen and (max-width: 1340px) {
+    .header__header-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .main-div__cards-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-div__card {
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "author": "Васильченко Степан",
+    "gameName": "Pudge vs creeps",
+    "imageSrc": "../src/images/2023/pudge_vs_creeps.png",
+    "altText": "pudge_vs_creeps",
+    "link": "../season-2023/Vasilchenko_Stepan/index.html"
+  },
+  {
+    "author": "Карамышев Елисей",
+    "gameName": "Bounce",
+    "imageSrc": "../src/images/2023/bounce.png",
+    "altText": "bounce",
+    "link": "../season-2023/Karamyshev_Elisey/index.html"
+  },
+  {
+    "author": "Кугелев Михаил",
+    "gameName": "Black&White",
+    "imageSrc": "../src/images/2023/black_and_white.png",
+    "altText": "black_and_white",
+    "link": "../season-2023/Kugelev_Mikhail/index.html"
+  },
+  {
+    "author": "Перевозчиков Дмитрий",
+    "gameName": "Yetisports",
+    "imageSrc": "../src/images/2023/yeti_sports.png",
+    "altText": "yeti_sports",
+    "link": "../season-2023/Perevozchikov_Dmitriy/index.html"
+  },
+  {
+    "author": "Погорелов Владислав",
+    "gameName": "Run from the dark",
+    "imageSrc": "../src/images/2023/run_from_the_dark.png",
+    "altText": "run_from_the_dark",
+    "link": "../season-2023/Pogorelov_Vladislav/index.html"
+  },
+  {
+    "author": "Лузянин Михаил",
+    "gameName": "Аэрохоккей",
+    "imageSrc": "../src/images/2023/aero_hockey.png",
+    "altText": "aero_hockey",
+    "link": "../season-2023/Luzyanin_Mikhail/index.html"
+  },
+  {
+    "author": "Баженов Василий",
+    "gameName": "Football",
+    "imageSrc": "../src/images/2023/football.png",
+    "altText": "football",
+    "link": "../season-2023/Bazhenov_Vasiliy/index.html"
+  },
+  {
+    "author": "Васильев Ярослав",
+    "gameName": "Space attack",
+    "imageSrc": "../src/images/2023/space_attack.png",
+    "altText": "space_attack",
+    "link": "../season-2023/Vasiliev_Yaroslav/index.html"
+  }
+]
