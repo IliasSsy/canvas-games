@@ -87,7 +87,7 @@ console.log("games json added!!!");
 
 
 
-const templatePath = "templates/season-index.html";
+const templatePath = "scripts/seanson-index.html";
 
 let htmlTemplate = FILE_READER.readFileSync(templatePath, "utf8");
 
@@ -100,3 +100,47 @@ FILE_READER.writeFileSync(
 );
 
 console.log("index.html created!!!");
+
+const PATH = require("path");
+
+function generateMainPage(){
+
+    
+    const seasonFolders = FILE_READER
+        .readdirSync(".")
+        .filter(name => name.startsWith("season-"));
+
+    const years = seasonFolders
+        .map(name => name.replace("season-", ""))
+        .sort();
+
+    const cardTemplate = FILE_READER.readFileSync(
+        "scripts/season-card.html",
+        "utf8"
+    );
+
+    let cardsHTML = "";
+
+    years.forEach(year => {
+
+        let card = cardTemplate.replaceAll("{{YEAR}}", year);
+
+        cardsHTML += card + "\n";
+    });
+
+    let mainTemplate = FILE_READER.readFileSync(
+        "scripts/main-index.html",
+        "utf8"
+    );
+
+    mainTemplate = mainTemplate.replace("{{SEASON_CARDS}}", cardsHTML);
+
+    FILE_READER.writeFileSync(
+        "index.html",
+        mainTemplate
+    );
+
+    console.log("Main page updated!");
+}
+
+generateMainPage();
