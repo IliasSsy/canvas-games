@@ -1,1 +1,9 @@
-[]
+[
+  {
+    "author": "Poskryakov Nikita",
+    "gameName": "Default",
+    "imageSrc": "../src/images/2026/default.png",
+    "altText": "Default",
+    "link": "../season-2026/Poskryakov_Nikita/index.html"
+  }
+]
