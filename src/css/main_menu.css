@@ -19,6 +19,12 @@ body {
     padding-left: 22px;
 }
 
+.card__image-preview-wrapper img {
+    max-width: 170px;
+    max-height: 170px;
+    object-fit: contain;
+}
+
 .header__logo-image {
     padding-top: 20px;
     cursor: pointer;
