@@ -71,7 +71,6 @@ function generateGamesJSON() {
             altText: gameName,
             link: `../${SEASON_DIR}/${folder}/index.html`
         });
-
     });
 
     GAMES.sort((a, b) => a.gameName.localeCompare(b.gameName));
