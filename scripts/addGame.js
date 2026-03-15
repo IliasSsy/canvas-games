@@ -6,6 +6,20 @@ const SEASON_DIR = `season-${YEAR}`;
 const IMAGE_DIR = `src/images/${YEAR}`;
 
 const GAMES = [];
+// TODO проблема с default picture и default name
+// TODO проблема с добавлением json
+
+function getGameTitle(htmlPath) {
+    const html = FILE_READER.readFileSync(htmlPath, "utf8");
+
+    const match = html.match(/<title>(.*?)<\/title>/i);
+
+    if (match && match[1]) {
+        return match[1].trim();
+    }
+
+    return "Unknown Game";
+}
 
 function formatGameName(fileName) {
 
@@ -49,7 +63,7 @@ FOLDERS.forEach(folder => {
 
     const imageName = image || "default.png";
 
-    const gameName = formatGameName(imageName);
+    const gameName = getGameTitle(gamePath);
 
     GAMES.push({
         author: author,
@@ -70,3 +84,19 @@ FILE_READER.writeFileSync(
 );
 
 console.log("games json added!!!");
+
+
+
+const templatePath = "templates/season-index.html";
+
+let htmlTemplate = FILE_READER.readFileSync(templatePath, "utf8");
+
+htmlTemplate = htmlTemplate.replaceAll("{{YEAR}}", YEAR);
+
+
+FILE_READER.writeFileSync(
+    `${SEASON_DIR}/index.html`,
+    htmlTemplate
+);
+
+console.log("index.html created!!!");

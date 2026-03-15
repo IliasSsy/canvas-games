@@ -1,9 +1,30 @@
 [
   {
-    "author": "Poskryakov Nikita",
-    "gameName": "Default",
+    "author": "Shitov Yaroslav",
+    "gameName": "Defense of the Blue Square",
     "imageSrc": "../src/images/2026/default.png",
-    "altText": "Default",
+    "altText": "Defense of the Blue Square",
+    "link": "../season-2026/Shitov_Yaroslav/index.html"
+  },
+  {
+    "author": "Shirokova Sofia",
+    "gameName": "Mouse and Cheese",
+    "imageSrc": "../src/images/2026/default.png",
+    "altText": "Mouse and Cheese",
+    "link": "../season-2026/Shirokova_Sofia/index.html"
+  },
+  {
+    "author": "Poskryakov Nikita",
+    "gameName": "My game",
+    "imageSrc": "../src/images/2026/default.png",
+    "altText": "My game",
     "link": "../season-2026/Poskryakov_Nikita/index.html"
+  },
+  {
+    "author": "Rudakov Timofey",
+    "gameName": "THE DICE",
+    "imageSrc": "../src/images/2026/default.png",
+    "altText": "THE DICE",
+    "link": "../season-2026/Rudakov_Timofey/index.html"
   }
 ]
