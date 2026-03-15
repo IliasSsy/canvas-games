@@ -1,4 +1,5 @@
 const FILE_READER = require("fs");
+const PATH = require("path");
 
 const YEAR = new Date().getUTCFullYear();
 
@@ -6,8 +7,6 @@ const SEASON_DIR = `season-${YEAR}`;
 const IMAGE_DIR = `src/images/${YEAR}`;
 
 const GAMES = [];
-// TODO проблема с default picture и default name
-// TODO проблема с добавлением json
 
 function getGameTitle(htmlPath) {
     const html = FILE_READER.readFileSync(htmlPath, "utf8");
@@ -34,78 +33,75 @@ function formatGameName(fileName) {
     return capitalized.join(" ");
 }
 
+function generateGamesJSON() {
 
-if (!FILE_READER.existsSync(SEASON_DIR)) {
-    console.log("Season directory not found");
-    process.exit(0);
-}
+    if (!FILE_READER.existsSync(SEASON_DIR)) {
+        console.log("Season directory not found");
+        process.exit(0);
+    }
 
-if (!FILE_READER.existsSync(IMAGE_DIR)) {
-    console.log("Image directory not found");
-    process.exit(0);
-}
+    if (!FILE_READER.existsSync(IMAGE_DIR)) {
+        console.log("Image directory not found");
+        process.exit(0);
+    }
 
+    const folders = FILE_READER.readdirSync(SEASON_DIR);
+    const images = FILE_READER.readdirSync(IMAGE_DIR);
 
-const FOLDERS = FILE_READER.readdirSync(SEASON_DIR);
-const IMAGES = FILE_READER.readdirSync(IMAGE_DIR);
+    folders.forEach(folder => {
 
-FOLDERS.forEach(folder => {
+        const gamePath = `${SEASON_DIR}/${folder}/index.html`;
 
-    const gamePath = `${SEASON_DIR}/${folder}/index.html`;
+        if (!FILE_READER.existsSync(gamePath)) return;
 
-    if (!FILE_READER.existsSync(gamePath)) return;
+        const author = folder.replace(/_/g, " ");
 
-    const author = folder.replace(/_/g, " ");
+        const image = images.find(img =>
+            img.toLowerCase().includes(folder.split("_")[0].toLowerCase())
+        );
 
-    const image = IMAGES.find(img =>
-        img.toLowerCase().includes(folder.split("_")[0].toLowerCase())
-    );
+        const imageName = image || "default.png";
 
-    const imageName = image || "default.png";
+        const gameName = getGameTitle(gamePath);
 
-    const gameName = getGameTitle(gamePath);
+        GAMES.push({
+            author: author,
+            gameName: gameName,
+            imageSrc: `../src/images/${YEAR}/${imageName}`,
+            altText: gameName,
+            link: `../${SEASON_DIR}/${folder}/index.html`
+        });
 
-    GAMES.push({
-        author: author,
-        gameName: gameName,
-        imageSrc: `../src/images/${YEAR}/${imageName}`,
-        altText: gameName,
-        link: `../${SEASON_DIR}/${folder}/index.html`
     });
 
-});
+    GAMES.sort((a, b) => a.gameName.localeCompare(b.gameName));
 
+    FILE_READER.writeFileSync(
+        `data/gamesData/games-${YEAR}.json`,
+        JSON.stringify(GAMES, null, 2)
+    );
 
-GAMES.sort((a, b) => a.gameName.localeCompare(b.gameName));
+    console.log("games json added!!!");
+}
 
-FILE_READER.writeFileSync(
-    `data/gamesData/games-${YEAR}.json`,
-    JSON.stringify(GAMES, null, 2)
-);
+function generateSeasonPage() {
 
-console.log("games json added!!!");
+    const templatePath = "scripts/seanson-index.html";
 
+    let htmlTemplate = FILE_READER.readFileSync(templatePath, "utf8");
 
+    htmlTemplate = htmlTemplate.replaceAll("{{YEAR}}", YEAR);
 
-const templatePath = "scripts/seanson-index.html";
+    FILE_READER.writeFileSync(
+        `${SEASON_DIR}/index.html`,
+        htmlTemplate
+    );
 
-let htmlTemplate = FILE_READER.readFileSync(templatePath, "utf8");
+    console.log("index.html created!!!");
+}
 
-htmlTemplate = htmlTemplate.replaceAll("{{YEAR}}", YEAR);
+function generateMainPage() {
 
-
-FILE_READER.writeFileSync(
-    `${SEASON_DIR}/index.html`,
-    htmlTemplate
-);
-
-console.log("index.html created!!!");
-
-const PATH = require("path");
-
-function generateMainPage(){
-
-    
     const seasonFolders = FILE_READER
         .readdirSync(".")
         .filter(name => name.startsWith("season-"));
@@ -126,6 +122,7 @@ function generateMainPage(){
         let card = cardTemplate.replaceAll("{{YEAR}}", year);
 
         cardsHTML += card + "\n";
+
     });
 
     let mainTemplate = FILE_READER.readFileSync(
@@ -143,4 +140,14 @@ function generateMainPage(){
     console.log("Main page updated!");
 }
 
-generateMainPage();
+function main() {
+
+    generateGamesJSON();
+
+    generateSeasonPage();
+
+    generateMainPage();
+
+}
+
+main()
