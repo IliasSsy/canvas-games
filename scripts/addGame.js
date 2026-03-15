@@ -8,7 +8,11 @@ const IMAGE_DIR = `src/images/${YEAR}`;
 
 const GAMES = [];
 
+
+
+
 function getGameTitle(htmlPath) {
+
     const html = FILE_READER.readFileSync(htmlPath, "utf8");
 
     const match = html.match(/<title>(.*?)<\/title>/i);
@@ -19,6 +23,7 @@ function getGameTitle(htmlPath) {
 
     return "Unknown Game";
 }
+
 
 function formatGameName(fileName) {
 
@@ -32,6 +37,34 @@ function formatGameName(fileName) {
 
     return capitalized.join(" ");
 }
+
+
+/*
+Поиск превью картинки
+1) сначала ищет точное совпадение Фамилия_Имя
+2) если нет — ищет по фамилии
+3) если нет — default.png
+*/
+
+function findPreviewImage(images, folder) {
+
+    const fullName = folder.toLowerCase();        
+    const surname = folder.split("_")[0].toLowerCase(); 
+
+    let image = images.find(img =>
+        img.toLowerCase().startsWith(fullName)
+    );
+
+    if (!image) {
+        image = images.find(img =>
+            img.toLowerCase().startsWith(surname)
+        );
+    }
+
+    return image || "default.png";
+}
+
+
 
 function generateGamesJSON() {
 
@@ -50,17 +83,13 @@ function generateGamesJSON() {
 
     folders.forEach(folder => {
 
-        const gamePath = `${SEASON_DIR}/${folder}/index.html`;
+        const gamePath = PATH.join(SEASON_DIR, folder, "index.html");
 
         if (!FILE_READER.existsSync(gamePath)) return;
 
         const author = folder.replace(/_/g, " ");
 
-        const image = images.find(img =>
-            img.toLowerCase().includes(folder.split("_")[0].toLowerCase())
-        );
-
-        const imageName = image || "default.png";
+        const imageName = findPreviewImage(images, folder);
 
         const gameName = getGameTitle(gamePath);
 
@@ -71,6 +100,7 @@ function generateGamesJSON() {
             altText: gameName,
             link: `../${SEASON_DIR}/${folder}/index.html`
         });
+
     });
 
     GAMES.sort((a, b) => a.gameName.localeCompare(b.gameName));
@@ -82,6 +112,7 @@ function generateGamesJSON() {
 
     console.log("games json added!!!");
 }
+
 
 function generateSeasonPage() {
 
@@ -99,6 +130,7 @@ function generateSeasonPage() {
     console.log("index.html created!!!");
 }
 
+
 function generateMainPage() {
 
     const seasonFolders = FILE_READER
@@ -107,7 +139,7 @@ function generateMainPage() {
 
     const years = seasonFolders
         .map(name => name.replace("season-", ""))
-        .sort();
+        .sort((a, b) => a - b);
 
     const cardTemplate = FILE_READER.readFileSync(
         "scripts/season-card.html",
@@ -139,6 +171,7 @@ function generateMainPage() {
     console.log("Main page updated!");
 }
 
+
 function main() {
 
     generateGamesJSON();
@@ -149,4 +182,4 @@ function main() {
 
 }
 
-main()
+main();
